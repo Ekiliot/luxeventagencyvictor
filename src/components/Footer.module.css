@@ -1,0 +1,35 @@
+.footer {
+  padding: 3rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(20, 20, 22, 0.05);
+  background: transparent;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.phone {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.phoneLink {
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.phoneLink:hover {
+  color: var(--accent);
+}
+
+.text {
+  color: var(--silver-dark);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}

@@ -1,0 +1,51 @@
+{
+  "navigation": {
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Who are we?",
+    "description1": "We are a team of young, creative, and ambitious professionals. Our specialization is creating unforgettable events and powerful brand promotion.",
+    "description2": "Our team consists of experienced SMM specialists who have proven their effectiveness by successfully promoting leading local brands. We know how to elevate your presence and get people talking about you."
+  },
+  "hero": {
+    "title": "LUX EVENT AGENCY",
+    "subtitle": "We handle every detail to create unforgettable experiences.",
+    "cta": "Explore Services"
+  },
+  "services": {
+    "title": "What We Do",
+    "items": [
+      {
+        "id": "planning",
+        "title": "Planning & Coordination",
+        "description": "We handle every detail: venue booking, invitations, finding the perfect photographer, and full coordination."
+      },
+      {
+        "id": "decor",
+        "title": "Decor & Atmosphere",
+        "description": "We create a magical atmosphere with custom decor, lighting, spectacular photo zones, and candy bars."
+      },
+      {
+        "id": "events",
+        "title": "Events & Parties",
+        "description": "We organize birthdays, graduation proms, parties, corporate events, and special home surprises."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Create Together",
+    "subtitle": "Ready to host the perfect event?",
+    "cta": "Get in Touch",
+    "name": "Name",
+    "phone": "Phone Number",
+    "email": "Email Address",
+    "message": "Message"
+  },
+  "footer": {
+    "rights": "All rights reserved. Lux Event Agency."
+  }
+}

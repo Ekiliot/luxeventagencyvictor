@@ -1,0 +1,200 @@
+.services {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+
+@media (min-width: 900px) {
+  .showcase {
+    flex-direction: row;
+    align-items: center;
+    gap: 6rem;
+  }
+}
+
+.displayArea {
+  flex: 1;
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  background: linear-gradient(145deg, rgba(255,255,255,0.8) 0%, rgba(240,240,245,0.5) 100%);
+  border: 1px solid rgba(20, 20, 22, 0.05);
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(20, 20, 22, 0.04);
+}
+
+@media (min-width: 900px) {
+  .displayArea {
+    height: 450px;
+  }
+}
+
+.displayContent {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) !important;
+  left: 3rem;
+  right: 3rem;
+  z-index: 2;
+}
+
+.displayNumber {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  font-family: 'Cinzel', serif;
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(20, 20, 22, 0.03);
+  z-index: -1;
+  user-select: none;
+}
+
+.displayIcon {
+  color: var(--foreground);
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 4px 10px rgba(20,20,22,0.05));
+}
+
+.displayTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+  font-weight: 500;
+  background: linear-gradient(135deg, var(--foreground), var(--silver-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.displayDesc {
+  color: var(--silver-dark);
+  line-height: 1.8;
+  font-size: 1.15rem;
+  font-weight: 300;
+}
+
+.listArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  perspective: 1000px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(20, 20, 22, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: scale(0.95) translateZ(0) rotateX(0deg);
+  transform-style: preserve-3d;
+  opacity: 0.55;
+  position: relative;
+  overflow: hidden;
+}
+
+.listItem::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.listItem:hover {
+  opacity: 0.85;
+  transform: scale(0.98) translateZ(10px) rotateX(2deg);
+  border-color: rgba(20, 20, 22, 0.08);
+}
+
+.listItem.active {
+  background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(255,255,255,0.65));
+  border: 1px solid rgba(20, 20, 22, 0.15);
+  box-shadow: 0 15px 40px rgba(20, 20, 22, 0.04), inset 0 1px 0 rgba(255,255,255,1);
+  transform: scale(1.05) translateZ(30px) rotateX(0deg);
+  opacity: 1;
+  z-index: 10;
+}
+
+.listItem.active::before {
+  opacity: 1;
+}
+
+.listNumber {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--silver);
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.listItem.active .listNumber {
+  color: var(--foreground);
+  -webkit-text-stroke: 0px transparent;
+  text-shadow: 0 2px 8px rgba(20,20,22,0.08);
+}
+
+.listTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: var(--silver);
+  font-weight: 500;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.listItem:hover .listTitle {
+  color: var(--silver-dark);
+  transform: translateX(5px);
+}
+
+.listItem.active .listTitle {
+  color: var(--foreground);
+  transform: translateX(12px);
+  text-shadow: 0 2px 8px rgba(20,20,22,0.05);
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -50px) scale(1.1); }
+}
+
+.blob1 {
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(244,244,246,0) 60%);
+  border-radius: 50%;
+  z-index: 0;
+  animation: float1 15s infinite ease-in-out;
+  pointer-events: none;
+}

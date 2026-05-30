@@ -1,0 +1,51 @@
+{
+  "navigation": {
+    "about": "Despre noi",
+    "services": "Servicii",
+    "portfolio": "Portofoliu",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "Despre noi",
+    "subtitle": "Cine suntem noi?",
+    "description1": "Suntem o echipă de tineri creativi, ambițioși și profesioniști. Ne specializăm în crearea de evenimente de neuitat și în promovarea puternică a brandurilor.",
+    "description2": "Echipa noastră include specialiști SMM cu experiență, care și-au demonstrat eficiența prin promovarea cu succes a unor branduri locale de top. Noi știm cum să facem ca lumea să vorbească despre tine."
+  },
+  "hero": {
+    "title": "LUX EVENT AGENCY",
+    "subtitle": "Ne ocupăm de fiecare detaliu pentru a crea experiențe de neuitat.",
+    "cta": "Explorează serviciile"
+  },
+  "services": {
+    "title": "Ce facem noi",
+    "items": [
+      {
+        "id": "planning",
+        "title": "Organizare și coordonare",
+        "description": "Ne ocupăm de fiecare detaliu: rezervarea locației, invitații, găsirea fotografului și coordonarea completă a evenimentului."
+      },
+      {
+        "id": "decor",
+        "title": "Decor și atmosferă",
+        "description": "Creăm o atmosferă de vis prin decor, lumini, foto zone spectaculoase și candy bar-uri personalizate."
+      },
+      {
+        "id": "events",
+        "title": "Evenimente și petreceri",
+        "description": "Organizăm zile de naștere, baluri de absolvire, petreceri, evenimente corporative și surprize la domiciliu."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Să creăm împreună",
+    "subtitle": "Ești gata să organizezi evenimentul perfect?",
+    "cta": "Contactează-ne",
+    "name": "Nume",
+    "phone": "Număr de telefon",
+    "email": "Adresă de e-mail",
+    "message": "Mesaj"
+  },
+  "footer": {
+    "rights": "Toate drepturile rezervate. Lux Event Agency."
+  }
+}
