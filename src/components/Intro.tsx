@@ -10,11 +10,14 @@ export function Intro() {
   useEffect(() => {
     document.body.style.overflow = "hidden";
     // Sequence lasts 3.5 seconds
-    const timer = setTimeout(() => setIsVisible(false), 3500);
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+      document.body.style.overflow = ""; // CLEAR IT HERE!
+    }, 3500);
 
     return () => {
       clearTimeout(timer);
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "";
     };
   }, []);
 

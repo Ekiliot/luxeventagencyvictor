@@ -16,23 +16,91 @@
     "subtitle": "Ne ocupăm de fiecare detaliu pentru a crea experiențe de neuitat.",
     "cta": "Explorează serviciile"
   },
+  "marquee": {
+    "items": [
+      "Ne ocupăm de fiecare detaliu",
+      "Decor & Lumini",
+      "Atmosferă & Coordonare",
+      "Foto-Zone",
+      "Surprize la domiciliu",
+      "Zile de naștere",
+      "Majorate & Aniversări",
+      "Baluri de absolvire",
+      "Petreceri Private",
+      "Evenimente Corporative",
+      "Rezervarea locației",
+      "Invitații & Candy Bar",
+      "Găsirea fotografului",
+      "Animatori",
+      "Aranjamente Florale",
+      "Cereri în Căsătorie"
+    ]
+  },
   "services": {
-    "title": "Ce facem noi",
+    "title": "Ce facem",
     "items": [
       {
+        "id": "decor",
+        "title": "Decor & Atmosferă",
+        "description": "Creăm o magie vizuală: decor exclusivist, lumini profesionale, o atmosferă captivantă, aranjamente florale și foto-zone cu stil."
+      },
+      {
         "id": "planning",
-        "title": "Organizare și coordonare",
-        "description": "Ne ocupăm de fiecare detaliu: rezervarea locației, invitații, găsirea fotografului și coordonarea completă a evenimentului."
+        "title": "Coordonare & Planificare",
+        "description": "Control total asupra fiecărui detaliu. Ne ocupăm de rezervarea locației perfecte, găsirea fotografului și crearea invitațiilor."
+      },
+      {
+        "id": "private",
+        "title": "Evenimente Private",
+        "description": "Organizăm zile de naștere, majorate, aniversări și petreceri private de neuitat, adaptate stilului tău."
+      },
+      {
+        "id": "surprises",
+        "title": "Surprize & Emoții",
+        "description": "Dăruim bucurie: de la cereri în căsătorie emoționante până la surprize neașteptate la domiciliu cu animatori."
+      },
+      {
+        "id": "corporate",
+        "title": "Corporate & Baluri",
+        "description": "Evenimente la scară largă, cum ar fi baluri de absolvire și evenimente corporative, organizate la cel mai înalt nivel."
+      },
+      {
+        "id": "candybar",
+        "title": "Candy Bar & Delicii",
+        "description": "Zone dulci, decorate cu un gust impecabil, care vor deveni centrul atracției la orice sărbătoare."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Portofoliu",
+    "filters": {
+      "all": "Toate Lucrările"
+    },
+    "items": [
+      {
+        "id": "corporate",
+        "title": "Evenimente Corporative",
+        "category": "Corporate"
+      },
+      {
+        "id": "candybar",
+        "title": "Candy Bars",
+        "category": "Candy Bar"
+      },
+      {
+        "id": "birthdays",
+        "title": "Zile de Naștere",
+        "category": "Private"
       },
       {
         "id": "decor",
-        "title": "Decor și atmosferă",
-        "description": "Creăm o atmosferă de vis prin decor, lumini, foto zone spectaculoase și candy bar-uri personalizate."
+        "title": "Decor Exclusivist",
+        "category": "Decor"
       },
       {
-        "id": "events",
-        "title": "Evenimente și petreceri",
-        "description": "Organizăm zile de naștere, baluri de absolvire, petreceri, evenimente corporative și surprize la domiciliu."
+        "id": "photozones",
+        "title": "Foto-zone Spectaculoase",
+        "category": "Instalații"
       }
     ]
   },

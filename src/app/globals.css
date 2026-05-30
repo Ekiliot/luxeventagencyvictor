@@ -10,6 +10,9 @@
   --glass-bg: rgba(188, 188, 196, 0.45); /* Translucent medium-dark platinum glass */
   --glass-border: rgba(13, 13, 15, 0.12); /* Slightly more prominent obsidian border */
   --glass-highlight: rgba(255, 255, 255, 0.2);
+  /* Mac OS Cursors */
+  --cursor-default: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'><path fill='%23000' stroke='%23fff' stroke-width='1.5' d='M6.5 1.5l12 12-5.5 1.5 3.5 6-3 1.5-3.5-6-5.5 4.5v-19z' stroke-linejoin='round'/></svg>"), auto;
+  --cursor-pointer: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'><path fill='%23000' stroke='%23fff' stroke-width='1.5' d='M10 2a2 2 0 012 2v4.5a2 2 0 012-2 2 2 0 012 2 2 2 0 012-2 2 2 0 012 2v5c0 4-3 7-7 7-4 0-7-2-7-5v-6.5a2 2 0 014 0V11a2 2 0 012-2z' stroke-linejoin='round'/></svg>") 10 2, pointer;
 }
 
 * {
@@ -21,18 +24,43 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
   background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  /* Hide default cursor globally */
+  cursor: none !important;
+  /* Hide native scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* GPU Accelerated fixed background for smooth scrolling without lag */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
   background-image: 
     radial-gradient(circle at 50% 0%, #cfcfd6 0%, #bcbcc4 100%),
     linear-gradient(rgba(13, 13, 15, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(13, 13, 15, 0.02) 1px, transparent 1px);
   background-size: 100% 100%, 50px 50px, 50px 50px;
   background-position: center 0, center center, center center;
-  color: var(--foreground);
-  font-family: 'Inter', sans-serif;
-  scroll-behavior: smooth;
-  position: relative;
+  pointer-events: none;
+}
+
+*, a, button, [role="button"], input[type="submit"], .link, .btn, .logo {
+  cursor: none !important;
+}
+
+/* Chrome, Safari, Opera */
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none;
 }
 
 /* Elite grainy noise overlay over the entire viewport */

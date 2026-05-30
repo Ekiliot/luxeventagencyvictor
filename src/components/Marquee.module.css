@@ -1,0 +1,89 @@
+.marqueeContainer {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  background: var(--foreground); /* Deep obsidian for high contrast */
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: scroll 80s linear infinite;
+}
+
+/* Subtle glow at the edges to make it look embedded */
+.marqueeContainer::before,
+.marqueeContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marqueeContainer::before {
+  left: 0;
+  background: linear-gradient(to right, var(--foreground), transparent);
+}
+
+.marqueeContainer::after {
+  right: 0;
+  background: linear-gradient(to left, var(--foreground), transparent);
+}
+
+.marqueeGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: max-content;
+}
+
+.marqueeItem {
+  display: flex;
+  align-items: center;
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--silver-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  padding: 0 2rem;
+}
+
+.dot {
+  color: var(--silver-dark); /* Subtle separator */
+  margin-right: 2rem;
+  font-size: 1rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%); /* We duplicated the array 4 times, so exactly 1/4th of the total track width */
+  }
+}
+
+@media (max-width: 768px) {
+  .marqueeItem {
+    font-size: 1rem;
+    padding: 0 1.5rem;
+  }
+  .dot {
+    margin-right: 1.5rem;
+  }
+  .marqueeContainer::before,
+  .marqueeContainer::after {
+    width: 40px;
+  }
+}

@@ -16,23 +16,91 @@
     "subtitle": "We handle every detail to create unforgettable experiences.",
     "cta": "Explore Services"
   },
-  "services": {
-    "title": "What We Do",
+  "marquee": {
     "items": [
-      {
-        "id": "planning",
-        "title": "Planning & Coordination",
-        "description": "We handle every detail: venue booking, invitations, finding the perfect photographer, and full coordination."
-      },
+      "We handle every detail",
+      "Decor & Lighting",
+      "Atmosphere & Coordination",
+      "Photo Zones",
+      "At-home Surprises",
+      "Birthdays",
+      "Coming of Age & Anniversaries",
+      "Graduation Proms",
+      "Private Parties",
+      "Corporate Events",
+      "Venue Booking",
+      "Invitations & Candy Bar",
+      "Finding the Photographer",
+      "Animators",
+      "Floral Arrangements",
+      "Marriage Proposals"
+    ]
+  },
+  "services": {
+    "title": "What we do",
+    "items": [
       {
         "id": "decor",
         "title": "Decor & Atmosphere",
-        "description": "We create a magical atmosphere with custom decor, lighting, spectacular photo zones, and candy bars."
+        "description": "We create visual magic: exclusive decor, professional lighting, captivating atmosphere, and stylish photo zones."
       },
       {
-        "id": "events",
-        "title": "Events & Parties",
-        "description": "We organize birthdays, graduation proms, parties, corporate events, and special home surprises."
+        "id": "planning",
+        "title": "Coordination & Planning",
+        "description": "Total control over details. We handle booking the perfect venue, finding the photographer, and creating invitations."
+      },
+      {
+        "id": "private",
+        "title": "Private Events",
+        "description": "We organize stylish birthdays, coming-of-age parties, anniversaries, and unforgettable private gatherings."
+      },
+      {
+        "id": "surprises",
+        "title": "Surprises & Emotions",
+        "description": "We help deliver joy: from touching marriage proposals to unexpected at-home surprises with animators."
+      },
+      {
+        "id": "corporate",
+        "title": "Corporate & Proms",
+        "description": "Large-scale events, such as graduation balls and corporate events, organized at the highest level."
+      },
+      {
+        "id": "candybar",
+        "title": "Candy Bar & Catering",
+        "description": "Sweet zones decorated with impeccable taste that will become the center of attraction at any celebration."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Portfolio",
+    "filters": {
+      "all": "All Work"
+    },
+    "items": [
+      {
+        "id": "corporate",
+        "title": "Corporate Events",
+        "category": "Corporate"
+      },
+      {
+        "id": "candybar",
+        "title": "Candy Bars",
+        "category": "Candy Bar"
+      },
+      {
+        "id": "birthdays",
+        "title": "Birthdays",
+        "category": "Private"
+      },
+      {
+        "id": "decor",
+        "title": "Exclusive Decor",
+        "category": "Decor"
+      },
+      {
+        "id": "photozones",
+        "title": "Spectacular Photo Zones",
+        "category": "Installations"
       }
     ]
   },

@@ -1,0 +1,134 @@
+.gallerySection {
+  position: relative;
+  background: none;
+  overflow: hidden;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--silver-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.accordionContainer {
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  max-height: 700px;
+  gap: 1rem;
+}
+
+.panel {
+  position: relative;
+  flex: 2; /* Initial flex value, overridden by Framer Motion */
+  min-width: 0; /* Prevents flex items from overflowing */
+  border-radius: 1.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  isolation: isolate; /* Create new stacking context */
+}
+
+.imageWrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.panel:hover .image {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 13, 15, 0.1) 0%,
+    rgba(13, 13, 15, 0.3) 50%,
+    rgba(13, 13, 15, 0.85) 100%
+  );
+  transition: background 0.6s ease;
+}
+
+.panel:hover .overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 13, 15, 0) 0%,
+    rgba(13, 13, 15, 0.2) 50%,
+    rgba(13, 13, 15, 0.9) 100%
+  );
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.category {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+}
+
+.itemTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .accordionContainer {
+    flex-direction: column;
+    height: 80vh;
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .itemTitle {
+    font-size: 1.25rem;
+  }
+}
