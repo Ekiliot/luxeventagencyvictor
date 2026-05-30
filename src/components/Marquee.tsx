@@ -10,7 +10,7 @@ export function Marquee({ dict }: { dict: any }) {
         {/* We duplicate the items to ensure infinite smooth scrolling without gaps */}
         {[...Array(4)].map((_, arrayIndex) => (
           <div key={arrayIndex} className={styles.marqueeGroup}>
-            {items.map((item, index) => (
+            {items.map((item: string, index: number) => (
               <div key={`${arrayIndex}-${index}`} className={styles.marqueeItem}>
                 <span className={styles.dot}>✦</span>
                 {item}

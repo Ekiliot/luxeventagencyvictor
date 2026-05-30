@@ -2,10 +2,10 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import styles from './Navigation.module.css';
 
-const navVariants = {
+const navVariants: Variants = {
   hidden: { y: -100, x: "-50%", opacity: 0 },
   visible: { 
     y: 0, 
@@ -20,7 +20,7 @@ const navVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { y: -20, opacity: 0 },
   visible: { 
     y: 0, 
