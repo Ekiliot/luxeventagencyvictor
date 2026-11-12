@@ -6,9 +6,6 @@ import styles from './Hero.module.css';
 export function Hero({ dict }: { dict: any }) {
   return (
     <section className={styles.hero}>
-      <div className={styles.background}></div>
-      <div className={styles.overlay}></div>
-      
       <div className={styles.content}>
         <motion.div
           className={styles.titleWrapper}

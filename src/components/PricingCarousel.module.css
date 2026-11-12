@@ -1,0 +1,261 @@
+/* ──────────────────────────────────────────────
+   PRICING CAROUSEL  —  Homepage Luxury Carousel
+   ────────────────────────────────────────────── */
+
+.carouselSection {
+  position: relative;
+  padding: 6rem clamp(1.5rem, 5vw, 6rem);
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.headerText {
+  max-width: 650px;
+}
+
+.eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--silver-dark);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  color: var(--foreground);
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.8rem;
+}
+
+.subtitle {
+  color: var(--silver-dark);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.navControls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.arrowBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arrowBtn:hover {
+  background: rgba(13, 13, 15, 0.9);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Horizontal Scroll Track */
+.trackContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0.5rem 2rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Carousel Card */
+.card {
+  flex: 0 0 clamp(290px, 30vw, 380px);
+  scroll-snap-align: start;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  box-shadow: 0 15px 35px rgba(13, 13, 15, 0.04);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(13, 13, 15, 0.2);
+  box-shadow: 0 25px 50px rgba(13, 13, 15, 0.09);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #e2e2ea;
+  margin-bottom: 1.2rem;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  padding: 0.3rem 0.8rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(13, 13, 15, 0.85);
+  color: #ffffff;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.category {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--silver);
+  margin-bottom: 0.4rem;
+}
+
+.cardTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+}
+
+.price {
+  font-family: 'Cinzel', serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.8rem;
+}
+
+.desc {
+  color: var(--silver-dark);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 1.4rem;
+  flex: 1;
+}
+
+.bookBtn {
+  width: 100%;
+  padding: 0.9rem 1.4rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  background: linear-gradient(135deg, #141416 0%, #303035 100%);
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.bookBtn:hover {
+  background: linear-gradient(135deg, #202024 0%, #404048 100%);
+  transform: translateY(-2px);
+}
+
+/* Footer Link to Full Prices */
+.footerAction {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+
+.viewAllLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.1rem 2.8rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--foreground);
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 40px;
+  backdrop-filter: blur(12px);
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(13, 13, 15, 0.05);
+}
+
+.viewAllLink:hover {
+  background: rgba(13, 13, 15, 0.9);
+  color: #ffffff;
+  border-color: rgba(13, 13, 15, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(13, 13, 15, 0.12);
+}

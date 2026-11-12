@@ -2,8 +2,23 @@
   "navigation": {
     "about": "Despre noi",
     "services": "Servicii",
+    "prices": "Prețuri",
     "portfolio": "Portofoliu",
     "contact": "Contact"
+  },
+  "pricingPage": {
+    "title": "Listă Prețuri & Colecții",
+    "subtitle": "Prețuri transparente pentru decor, fotozone și organizarea evenimentelor tale",
+    "allCategories": "Toate categoriile",
+    "orderBtn": "Trimite cerere",
+    "modalTitle": "Rezervare serviciu",
+    "modalSubtitle": "Completați datele de contact și vă vom apela pentru detalii",
+    "namePlaceholder": "Numele dvs.",
+    "phonePlaceholder": "Număr de telefon (+373 ...)",
+    "datePlaceholder": "Data evenimentului",
+    "sendBtn": "Confirmă rezervarea",
+    "successTitle": "Cerere recepționată cu succes!",
+    "successDesc": "Vă vom contacta în cel mult 15 minute."
   },
   "about": {
     "title": "Despre noi",
@@ -12,7 +27,7 @@
     "description2": "Echipa noastră include specialiști SMM cu experiență, care și-au demonstrat eficiența prin promovarea cu succes a unor branduri locale de top. Noi știm cum să facem ca lumea să vorbească despre tine."
   },
   "hero": {
-    "title": "LUX EVENT AGENCY",
+    "title": "LUXE EVENT AGENCY",
     "subtitle": "Ne ocupăm de fiecare detaliu pentru a crea experiențe de neuitat.",
     "cta": "Explorează serviciile"
   },
@@ -114,6 +129,6 @@
     "message": "Mesaj"
   },
   "footer": {
-    "rights": "Toate drepturile rezervate. Lux Event Agency."
+    "rights": "Toate drepturile rezervate. Luxe Event Agency."
   }
 }

@@ -1,0 +1,246 @@
+{
+  "categories": [
+    {
+      "id": "photozones",
+      "name": {
+        "ru": "Фотозоны",
+        "ro": "Fotozone",
+        "en": "Photozones"
+      },
+      "order": 1
+    },
+    {
+      "id": "decor",
+      "name": {
+        "ru": "Декор и Свет",
+        "ro": "Decor și Lumini",
+        "en": "Decor & Lights"
+      },
+      "order": 2
+    },
+    {
+      "id": "candybar",
+      "name": {
+        "ru": "Candy Bar",
+        "ro": "Candy Bar",
+        "en": "Candy Bar"
+      },
+      "order": 3
+    },
+    {
+      "id": "coordination",
+      "name": {
+        "ru": "Координация",
+        "ro": "Coordonare",
+        "en": "Coordination"
+      },
+      "order": 4
+    },
+    {
+      "id": "turnkey",
+      "name": {
+        "ru": "Праздники под ключ",
+        "ro": "Evenimente la cheie",
+        "en": "Turnkey Events"
+      },
+      "order": 5
+    }
+  ],
+  "items": [
+    {
+      "id": "item_photo_1",
+      "categoryId": "photozones",
+      "title": {
+        "ru": "Глянцевая фотозона с неоном",
+        "ro": "Fotozonă lucioasă cu neon",
+        "en": "Glossy Photozone with Neon"
+      },
+      "description": {
+        "ru": "Идеальная фотозона для стильного юбилея, корпоратива или дня рождения с индивидуальной надписью.",
+        "ro": "Fotozonă ideală pentru aniversare, eveniment corporativ sau zi de naștere cu inscripție personalizată.",
+        "en": "Designer photozone for luxury birthdays, corporate events, and galas with personalized typography."
+      },
+      "price": "от 280 €",
+      "image": "/photozones/1f4ebfa4-34af-4cbd-8059-3186ce818cb0.jpg",
+      "badge": "Хит",
+      "features": [
+        {
+          "ru": "Размер 2.5 x 3.0 м",
+          "ro": "Dimensiune 2.5 x 3.0 m",
+          "en": "Size 2.5 x 3.0 m"
+        },
+        {
+          "ru": "Индивидуальный неоновый слоган",
+          "ro": "Slogan neon personalizat",
+          "en": "Custom neon sign included"
+        },
+        {
+          "ru": "Профессиональная подсветка",
+          "ro": "Iluminare profesională",
+          "en": "Professional lighting setup"
+        },
+        {
+          "ru": "Монтаж и демонтаж",
+          "ro": "Montare și demontare",
+          "en": "Full delivery & installation"
+        }
+      ],
+      "order": 1,
+      "active": true
+    },
+    {
+      "id": "item_photo_2",
+      "categoryId": "photozones",
+      "title": {
+        "ru": "Цветочная арка и парящий декор",
+        "ro": "Arc floral și decor plutitor",
+        "en": "Floral Arch & Floating Decor"
+      },
+      "description": {
+        "ru": "Объемная композиция из премиальных живых и шелковых цветов с золотыми стойками.",
+        "ro": "Compoziție voluminoasă din flori vii și de mătase premium cu suporturi aurii.",
+        "en": "Lush floral composition blending fresh blooms with luxury accents and gold pillars."
+      },
+      "price": "от 350 €",
+      "image": "/photozones/469f67a3-025a-4daf-a1ab-1bd0d9ec4152.jpg",
+      "badge": "Премиум",
+      "features": [
+        {
+          "ru": "Премиум флористика",
+          "ro": "Floristică premium",
+          "en": "Premium florals"
+        },
+        {
+          "ru": "3D визуализация перед монтажом",
+          "ro": "Randare 3D înainte de montare",
+          "en": "3D render mockup"
+        },
+        {
+          "ru": "Подиум и ковровая дорожка",
+          "ro": "Podium și covor",
+          "en": "Podium and runner included"
+        }
+      ],
+      "order": 2,
+      "active": true
+    },
+    {
+      "id": "item_candy_1",
+      "categoryId": "candybar",
+      "title": {
+        "ru": "Кэнди бар «Royal Sweet»",
+        "ro": "Candy bar «Royal Sweet»",
+        "en": "Royal Sweet Candy Bar"
+      },
+      "description": {
+        "ru": "Элегантный сладкий стол с авторскими десертами, тематической сервировкой и индивидуальным оформлением.",
+        "ro": "Bufet dulce elegant cu deserturi de autor, veselă tematică și decor personalizat.",
+        "en": "Signature artisan dessert buffet with themed presentation, luxury glassware, and custom signage."
+      },
+      "price": "от 200 €",
+      "image": "https://catering-muscat.ru/img/blog/blog_candy_6.jpg",
+      "badge": "Популярно",
+      "features": [
+        {
+          "ru": "На 30–60 персон",
+          "ro": "Pentru 30–60 persoane",
+          "en": "Serves 30–60 guests"
+        },
+        {
+          "ru": "Макаронс, капкейки, кейк-попсы",
+          "ro": "Macarons, cupcakes, cake pops",
+          "en": "Macarons, cupcakes & cake pops"
+        },
+        {
+          "ru": "Аренда посуды и подставок",
+          "ro": "Chirie veselă și suporturi",
+          "en": "Glassware and stand rentals"
+        },
+        {
+          "ru": "Флористическое оформление",
+          "ro": "Decor floral integrat",
+          "en": "Floral integration"
+        }
+      ],
+      "order": 1,
+      "active": true
+    },
+    {
+      "id": "item_decor_1",
+      "categoryId": "decor",
+      "title": {
+        "ru": "Архитектурный свет и заливка зала",
+        "ro": "Lumină arhitecturală și atmosferică",
+        "en": "Architectural Lighting & Ambiance"
+      },
+      "description": {
+        "ru": "Полное преображение банкетного зала с помощью беспроводных LED-прожекторов и световых голов.",
+        "ro": "Transformarea completă a sălii de evenimente cu reflectoare LED fără fir și capete mobile.",
+        "en": "Complete venue transformation using wireless ambient up-lights and moving heads."
+      },
+      "price": "от 300 €",
+      "image": "/decor.png",
+      "badge": "Must have",
+      "features": [
+        {
+          "ru": "До 24 беспроводных приборов",
+          "ro": "Până la 24 corpuri wireless",
+          "en": "Up to 24 wireless uplights"
+        },
+        {
+          "ru": "Художник по свету на все время",
+          "ro": "Inginer de lumini prezent",
+          "en": "Dedicated lighting technician"
+        },
+        {
+          "ru": "Управление сценариями света",
+          "ro": "Scenarii de lumină adaptate",
+          "en": "Dynamic light shows"
+        }
+      ],
+      "order": 1,
+      "active": true
+    },
+    {
+      "id": "item_turnkey_1",
+      "categoryId": "turnkey",
+      "title": {
+        "ru": "Организация праздника «Все Включено»",
+        "ro": "Organizare eveniment «All Inclusive»",
+        "en": "Turnkey Luxury Celebration"
+      },
+      "description": {
+        "ru": "От концепции до финального салюта: подбор локации, декор, фотограф, кейтеринг, ведущий и шоу.",
+        "ro": "De la concept până la final: locație, decor, foto/video, catering, prezentator și program show.",
+        "en": "A-Z event production: venue booking, decor, vendor curation, host, catering, and on-site coordination."
+      },
+      "price": "от 900 €",
+      "image": "/events.png",
+      "badge": "VIP",
+      "features": [
+        {
+          "ru": "Личный координатор 24/7",
+          "ro": "Coordonator personal 24/7",
+          "en": "Personal event planner 24/7"
+        },
+        {
+          "ru": "Подбор и бронь локации",
+          "ro": "Selecție și rezervare locație",
+          "en": "Venue scouting & booking"
+        },
+        {
+          "ru": "Полный тайминг и режиссура",
+          "ro": "Timing complet și regie",
+          "en": "Master schedule & directing"
+        },
+        {
+          "ru": "Контроль подрядчиков",
+          "ro": "Control total contractori",
+          "en": "Vendor management"
+        }
+      ],
+      "order": 1,
+      "active": true
+    }
+  ]
+}

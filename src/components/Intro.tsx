@@ -39,7 +39,7 @@ export function Intro() {
               animate={{ opacity: 1, y: 0, filter: "blur(0px)", letterSpacing: "20px" }}
               transition={{ duration: 1.5, ease: "easeOut" }}
             >
-              LUX
+              LUXE
             </motion.h1>
             
             <motion.p

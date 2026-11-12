@@ -63,14 +63,19 @@ export function Navigation({ lang, dict }: { lang: string, dict: any }) {
           <nav className={styles.nav}>
             <motion.div variants={itemVariants}>
               <Link href={`/${lang}`} className={styles.logo}>
-                LUX<span className={styles.goldDot}>.</span>
+                LUXE<span className={styles.goldDot}>.</span>
               </Link>
             </motion.div>
             
             <div className={styles.links}>
-              <motion.a variants={itemVariants} href="#about" className={styles.link}>{dict.about}</motion.a>
-              <motion.a variants={itemVariants} href="#services" className={styles.link}>{dict.services}</motion.a>
-              <motion.a variants={itemVariants} href="#contact" className={styles.link}>{dict.contact}</motion.a>
+              <motion.a variants={itemVariants} href={`/${lang}#services`} className={styles.link}>{dict.services}</motion.a>
+              <motion.div variants={itemVariants}>
+                <Link href={`/${lang}/prices`} className={styles.link}>
+                  {dict.prices || 'Прайс'}
+                </Link>
+              </motion.div>
+              <motion.a variants={itemVariants} href={`/${lang}#gallery`} className={styles.link}>{dict.portfolio || 'Галерея'}</motion.a>
+              <motion.a variants={itemVariants} href={`/${lang}#contact`} className={styles.link}>{dict.contact}</motion.a>
               
               <motion.div variants={itemVariants} className={styles.rightGroup}>
                 <a href="tel:+37360123456" className={styles.navPhone}>

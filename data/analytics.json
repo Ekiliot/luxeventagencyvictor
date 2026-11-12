@@ -1,0 +1,277 @@
+{
+  "summary": {
+    "totalViews": 23,
+    "uniqueVisitors": 2
+  },
+  "daily": {
+    "2026-11-12": {
+      "views": 23,
+      "unique": 2
+    }
+  },
+  "sources": {
+    "localhost": 16,
+    "Прямой переход": 7
+  },
+  "countries": {
+    "Молдова (MD)": 23
+  },
+  "devices": {
+    "Desktop": 23
+  },
+  "recentVisits": [
+    {
+      "id": "vis_1794524769938_2i93",
+      "timestamp": "2026-11-12T23:06:09.938Z",
+      "path": "/en/prices",
+      "referrer": "Прямой переход",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794523508579_saj2",
+      "timestamp": "2026-11-12T22:45:08.579Z",
+      "path": "/en/prices",
+      "referrer": "Прямой переход",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794523500157_rm4u",
+      "timestamp": "2026-11-12T22:45:00.157Z",
+      "path": "/en",
+      "referrer": "Прямой переход",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522885362_gf5u",
+      "timestamp": "2026-11-12T22:34:45.362Z",
+      "path": "/en/prices",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522844462_y8dz",
+      "timestamp": "2026-11-12T22:34:04.462Z",
+      "path": "/ru",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522839289_p3wx",
+      "timestamp": "2026-11-12T22:33:59.289Z",
+      "path": "/ru/prices",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522796465_j9o7",
+      "timestamp": "2026-11-12T22:33:16.465Z",
+      "path": "/ru",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522795240_n3cr",
+      "timestamp": "2026-11-12T22:33:15.240Z",
+      "path": "/ru/prices",
+      "referrer": "Прямой переход",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522772082_i8vr",
+      "timestamp": "2026-11-12T22:32:52.082Z",
+      "path": "/ru/prices",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522766989_gqdz",
+      "timestamp": "2026-11-12T22:32:46.989Z",
+      "path": "/ru",
+      "referrer": "Прямой переход",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522696232_xpwl",
+      "timestamp": "2026-11-12T22:31:36.232Z",
+      "path": "/en/prices",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522694084_f0vb",
+      "timestamp": "2026-11-12T22:31:34.084Z",
+      "path": "/en",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522693820_s24z",
+      "timestamp": "2026-11-12T22:31:33.820Z",
+      "path": "/en/prices",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522527070_srqw",
+      "timestamp": "2026-11-12T22:28:47.070Z",
+      "path": "/en/prices",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522525201_kau2",
+      "timestamp": "2026-11-12T22:28:45.201Z",
+      "path": "/en",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522523302_gcfk",
+      "timestamp": "2026-11-12T22:28:43.303Z",
+      "path": "/en/prices",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522512493_1whc",
+      "timestamp": "2026-11-12T22:28:32.493Z",
+      "path": "/en",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522374848_m1sf",
+      "timestamp": "2026-11-12T22:26:14.848Z",
+      "path": "/en",
+      "referrer": "Прямой переход",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522310018_2abi",
+      "timestamp": "2026-11-12T22:25:10.018Z",
+      "path": "/ru",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522261560_gdkg",
+      "timestamp": "2026-11-12T22:24:21.560Z",
+      "path": "/ro",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522221031_450o",
+      "timestamp": "2026-11-12T22:23:41.031Z",
+      "path": "/ru",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794522133614_gso3",
+      "timestamp": "2026-11-12T22:22:13.614Z",
+      "path": "/ru/prices",
+      "referrer": "Прямой переход",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    },
+    {
+      "id": "vis_1794521813606_lqs1",
+      "timestamp": "2026-11-12T22:16:53.606Z",
+      "path": "/en",
+      "referrer": "localhost",
+      "country": "Молдова (MD)",
+      "city": "Chişinău",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "ip": "::1"
+    }
+  ]
+}

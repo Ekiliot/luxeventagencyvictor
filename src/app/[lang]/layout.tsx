@@ -4,9 +4,10 @@ import { Intro } from "@/components/Intro";
 import { CustomScrollbar } from "@/components/CustomScrollbar";
 import { CustomCursor } from "@/components/CustomCursor";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 
 export const metadata: Metadata = {
-  title: "Lux Event Agency | Elevate Your Brand",
+  title: "Luxe Event Agency | Elevate Your Brand",
   description: "Creating unforgettable premium events and powerful brand promotion.",
 };
 
@@ -25,6 +26,7 @@ export default async function RootLayout({
   return (
     <html lang={resolvedParams.lang}>
       <body>
+        <AnalyticsTracker />
         <SmoothScroll />
         <CustomCursor />
         <Intro />

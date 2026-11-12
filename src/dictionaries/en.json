@@ -2,8 +2,23 @@
   "navigation": {
     "about": "About",
     "services": "Services",
+    "prices": "Pricing",
     "portfolio": "Portfolio",
     "contact": "Contact"
+  },
+  "pricingPage": {
+    "title": "Pricing & Collections",
+    "subtitle": "Transparent packages for bespoke decor, photozones, and turnkey event planning",
+    "allCategories": "All categories",
+    "orderBtn": "Book Package",
+    "modalTitle": "Reserve Your Date",
+    "modalSubtitle": "Leave your details and our planner will call you back within 15 minutes",
+    "namePlaceholder": "Your name",
+    "phonePlaceholder": "Phone number (+373 ...)",
+    "datePlaceholder": "Event date (optional)",
+    "sendBtn": "Confirm Booking",
+    "successTitle": "Inquiry Received!",
+    "successDesc": "Our team will reach out to you within 15 minutes."
   },
   "about": {
     "title": "About Us",
@@ -12,7 +27,7 @@
     "description2": "Our team consists of experienced SMM specialists who have proven their effectiveness by successfully promoting leading local brands. We know how to elevate your presence and get people talking about you."
   },
   "hero": {
-    "title": "LUX EVENT AGENCY",
+    "title": "LUXE EVENT AGENCY",
     "subtitle": "We handle every detail to create unforgettable experiences.",
     "cta": "Explore Services"
   },
@@ -114,6 +129,6 @@
     "message": "Message"
   },
   "footer": {
-    "rights": "All rights reserved. Lux Event Agency."
+    "rights": "All rights reserved. Luxe Event Agency."
   }
 }

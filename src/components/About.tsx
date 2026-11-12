@@ -66,7 +66,7 @@ export function About({ dict }: { dict: any }) {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         >
           <div className={styles.glassFrame}>
-            <img src={teamImage.src} alt="Lux Event Agency Team" className={styles.image} />
+            <img src={teamImage.src} alt="Luxe Event Agency Team" className={styles.image} />
             {/* The sweeping shine effect */}
             <div className={styles.shine}></div>
           </div>
