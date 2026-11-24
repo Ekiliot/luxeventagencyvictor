@@ -33,3 +33,17 @@
   font-size: 0.875rem;
   letter-spacing: 0.05em;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2.25rem 1.25rem;
+  }
+
+  .phone {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 0.8rem;
+  }
+}

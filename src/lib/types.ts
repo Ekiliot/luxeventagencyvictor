@@ -1,3 +1,5 @@
+export type Currency = 'EUR' | 'MDL';
+
 export type LeadStatus = 'new' | 'in_progress' | 'completed' | 'cancelled';
 
 export interface Lead {
@@ -30,6 +32,8 @@ export interface CatalogItem {
   title: LocalizedString;
   description: LocalizedString;
   price: string;
+  currency?: Currency;
+  priceFrom?: boolean;
   image: string;
   badge?: string;
   features: LocalizedString[];
@@ -42,6 +46,15 @@ export interface CatalogData {
   items: CatalogItem[];
 }
 
+export interface PortfolioItem {
+  id: string;
+  title: LocalizedString;
+  category: LocalizedString;
+  image: string; // Base64 (data:image/...;base64,...) or URL
+  order: number;
+  active: boolean;
+}
+
 export interface ClientDossier {
   id: string;
   createdAt: string;
@@ -52,6 +65,9 @@ export interface ClientDossier {
   eventDate?: string;
   eventType?: string;
   budget?: string;
+  budgetAmount?: number;
+  budgetCurrency?: Currency;
+  expensesAmount?: number;
   status: 'lead' | 'in_discussion' | 'contract' | 'paid' | 'completed' | 'archived';
   tags?: string[];
   notes?: string;

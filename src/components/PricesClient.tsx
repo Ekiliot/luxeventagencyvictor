@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, X, ArrowRight, Loader2, CheckCircle2 } from 'lucide-react';
 import { CatalogData, CatalogItem } from '@/lib/types';
+import { formatPrice } from '@/lib/formatPrice';
 import styles from './PricesClient.module.css';
 
 interface PricesClientProps {
@@ -59,14 +60,15 @@ export function PricesClient({ catalog, lang, dict }: PricesClientProps) {
 
     try {
       const itemTitle = getLoc(selectedItem.title);
+      const displayPrice = formatPrice(selectedItem, lang);
       const res = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: bookingForm.name,
           phone: bookingForm.phone,
-          message: `Бронирование: ${itemTitle} (${selectedItem.price}). Дата: ${bookingForm.date || 'Не указана'}. Пожелания: ${bookingForm.notes || 'Нет'}`,
-          service: `${itemTitle} (${selectedItem.price})`
+          message: `Бронирование: ${itemTitle} (${displayPrice}). Дата: ${bookingForm.date || 'Не указана'}. Пожелания: ${bookingForm.notes || 'Нет'}`,
+          service: `${itemTitle} (${displayPrice})`
         })
       });
 
@@ -163,7 +165,7 @@ export function PricesClient({ catalog, lang, dict }: PricesClientProps) {
                 <div className={styles.cardContent}>
                   {categoryName && <span className={styles.cardCategory}>{categoryName}</span>}
                   <h3 className={styles.cardTitle}>{title}</h3>
-                  <div className={styles.priceTag}>{item.price}</div>
+                  <div className={styles.priceTag}>{formatPrice(item, lang)}</div>
                   <p className={styles.cardDesc}>{desc}</p>
 
                   {item.features && item.features.length > 0 && (
@@ -230,7 +232,7 @@ export function PricesClient({ catalog, lang, dict }: PricesClientProps) {
                 <>
                   <h3 className={styles.modalTitle}>{dict.modalTitle || 'Бронирование услуги'}</h3>
                   <div className={styles.modalItemName}>
-                    {getLoc(selectedItem.title)} — {selectedItem.price}
+                    {getLoc(selectedItem.title)} — {formatPrice(selectedItem, lang)}
                   </div>
 
                   {errorMsg && (

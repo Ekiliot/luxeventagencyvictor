@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ArrowRight, X, Loader2, CheckCircle2 } from 'lucide-react';
 import { CatalogData, CatalogItem } from '@/lib/types';
+import { formatPrice } from '@/lib/formatPrice';
 import styles from './PricingCarousel.module.css';
 import modalStyles from './PricesClient.module.css';
 
@@ -63,14 +64,15 @@ export function PricingCarousel({ catalog, lang, dict }: PricingCarouselProps) {
 
     try {
       const itemTitle = getLoc(selectedItem.title);
+      const displayPrice = formatPrice(selectedItem, lang);
       const res = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: bookingForm.name,
           phone: bookingForm.phone,
-          message: `Заявка с карусели: ${itemTitle} (${selectedItem.price}). Дата: ${bookingForm.date || 'Не указана'}. Пожелания: ${bookingForm.notes || 'Нет'}`,
-          service: `${itemTitle} (${selectedItem.price})`
+          message: `Заявка с карусели: ${itemTitle} (${displayPrice}). Дата: ${bookingForm.date || 'Не указана'}. Пожелания: ${bookingForm.notes || 'Нет'}`,
+          service: `${itemTitle} (${displayPrice})`
         })
       });
 
@@ -156,7 +158,7 @@ export function PricingCarousel({ catalog, lang, dict }: PricingCarouselProps) {
                 <div className={styles.cardContent}>
                   {cat && <span className={styles.category}>{getLoc(cat.name)}</span>}
                   <h3 className={styles.cardTitle}>{titleStr}</h3>
-                  <div className={styles.price}>{item.price}</div>
+                  <div className={styles.price}>{formatPrice(item, lang)}</div>
                   <p className={styles.desc}>{descStr}</p>
 
                   <button onClick={() => openBooking(item)} className={styles.bookBtn}>
@@ -216,7 +218,7 @@ export function PricingCarousel({ catalog, lang, dict }: PricingCarouselProps) {
                 <>
                   <h3 className={modalStyles.modalTitle}>Бронирование услуги</h3>
                   <div className={modalStyles.modalItemName}>
-                    {getLoc(selectedItem.title)} — {selectedItem.price}
+                    {getLoc(selectedItem.title)} — {formatPrice(selectedItem, lang)}
                   </div>
 
                   {errorMsg && (

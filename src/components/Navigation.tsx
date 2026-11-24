@@ -1,8 +1,10 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { motion, Variants } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { Menu, X, Phone } from 'lucide-react';
 import styles from './Navigation.module.css';
 
 const navVariants: Variants = {
@@ -32,11 +34,17 @@ const itemVariants: Variants = {
 export function Navigation({ lang, dict }: { lang: string, dict: any }) {
   const pathname = usePathname();
   const router = useRouter();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const switchLanguage = (newLang: string) => {
     const pathWithoutLang = pathname.replace(`/${lang}`, '');
+    setMobileMenuOpen(false);
     router.push(`/${newLang}${pathWithoutLang}`);
   };
+
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <>
@@ -62,7 +70,7 @@ export function Navigation({ lang, dict }: { lang: string, dict: any }) {
         <div className={styles.container}>
           <nav className={styles.nav}>
             <motion.div variants={itemVariants}>
-              <Link href={`/${lang}`} className={styles.logo}>
+              <Link href={`/${lang}`} className={styles.logo} onClick={() => setMobileMenuOpen(false)}>
                 LUXE<span className={styles.goldDot}>.</span>
               </Link>
             </motion.div>
@@ -74,7 +82,11 @@ export function Navigation({ lang, dict }: { lang: string, dict: any }) {
                   {dict.prices || 'Прайс'}
                 </Link>
               </motion.div>
-              <motion.a variants={itemVariants} href={`/${lang}#gallery`} className={styles.link}>{dict.portfolio || 'Галерея'}</motion.a>
+              <motion.div variants={itemVariants}>
+                <Link href={`/${lang}/portfolio`} className={styles.link}>
+                  {dict.portfolio || 'Портфолио'}
+                </Link>
+              </motion.div>
               <motion.a variants={itemVariants} href={`/${lang}#contact`} className={styles.link}>{dict.contact}</motion.a>
               
               <motion.div variants={itemVariants} className={styles.rightGroup}>
@@ -95,9 +107,95 @@ export function Navigation({ lang, dict }: { lang: string, dict: any }) {
                 </div>
               </motion.div>
             </div>
+
+            {/* Mobile Controls (hidden on desktop > 900px) */}
+            <div className={styles.mobileControls}>
+              <div className={styles.mobileLangSwitcher}>
+                {['en', 'ro', 'ru'].map((l) => (
+                  <button
+                    key={l}
+                    type="button"
+                    onClick={() => switchLanguage(l)}
+                    className={`${styles.mobileLangBtn} ${lang === l ? styles.mobileLangActive : ''}`}
+                  >
+                    {l}
+                  </button>
+                ))}
+              </div>
+              <button
+                type="button"
+                className={styles.menuToggleBtn}
+                onClick={() => setMobileMenuOpen((prev) => !prev)}
+                aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={mobileMenuOpen}
+              >
+                {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              </button>
+            </div>
           </nav>
         </div>
       </motion.header>
+
+      {/* Mobile Glass Drawer Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            className={styles.mobileMenuBackdrop}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <motion.div
+              className={styles.mobileMenuPanel}
+              initial={{ opacity: 0, y: -16, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -16, scale: 0.97 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className={styles.mobileNavLinks}>
+                <a
+                  href={`/${lang}#services`}
+                  className={styles.mobileNavLink}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {dict.services}
+                </a>
+                <Link
+                  href={`/${lang}/prices`}
+                  className={styles.mobileNavLink}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {dict.prices || 'Прайс'}
+                </Link>
+                <Link
+                  href={`/${lang}/portfolio`}
+                  className={styles.mobileNavLink}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {dict.portfolio || 'Портфолио'}
+                </Link>
+                <a
+                  href={`/${lang}#contact`}
+                  className={styles.mobileNavLink}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {dict.contact}
+                </a>
+              </div>
+
+              <div className={styles.mobileMenuDivider} />
+
+              <a href="tel:+37360123456" className={styles.mobilePhoneBtn}>
+                <Phone size={15} />
+                <span>+373 60 123 456</span>
+              </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

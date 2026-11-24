@@ -4,9 +4,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { PricesClient } from "@/components/PricesClient";
 
-export async function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'ro' }, { lang: 'ru' }];
-}
+export const dynamic = 'force-dynamic';
 
 export default async function PricesPage({
   params,

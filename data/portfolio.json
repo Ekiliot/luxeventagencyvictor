@@ -1,0 +1,82 @@
+[
+  {
+    "id": "corporate",
+    "title": {
+      "ru": "Корпоративные Мероприятия",
+      "ro": "Evenimente Corporative",
+      "en": "Corporate Events"
+    },
+    "category": {
+      "ru": "Корпоративы",
+      "ro": "Corporate",
+      "en": "Corporate"
+    },
+    "image": "https://static.tildacdn.com/tild3237-3161-4437-a361-383537333038/Screenshot_-_2025-10.png",
+    "order": 1,
+    "active": true
+  },
+  {
+    "id": "candybar",
+    "title": {
+      "ru": "Кэнди Бары",
+      "ro": "Candy Bars",
+      "en": "Candy Bars"
+    },
+    "category": {
+      "ru": "Candy Bar",
+      "ro": "Candy Bar",
+      "en": "Candy Bar"
+    },
+    "image": "https://catering-muscat.ru/img/blog/blog_candy_6.jpg",
+    "order": 2,
+    "active": true
+  },
+  {
+    "id": "birthdays",
+    "title": {
+      "ru": "Дни Рождения",
+      "ro": "Zile de Naștere",
+      "en": "Birthdays"
+    },
+    "category": {
+      "ru": "Частные события",
+      "ro": "Privat",
+      "en": "Private"
+    },
+    "image": "https://optim.tildacdn.com/tild3961-6363-4562-b862-356434613264/-/resize/824x/-/format/webp/DSC07101.jpg.webp",
+    "order": 3,
+    "active": true
+  },
+  {
+    "id": "decor",
+    "title": {
+      "ru": "Эксклюзивный Декор",
+      "ro": "Decor Exclusivist",
+      "en": "Exclusive Decor"
+    },
+    "category": {
+      "ru": "Декор",
+      "ro": "Decor",
+      "en": "Decor"
+    },
+    "image": "https://img.freepik.com/free-photo/pink-chrysanthemums-hang-threads-from-ceiling-dinner-hall_1304-3325.jpg?semt=ais_related_payload_trends&w=740&q=80",
+    "order": 4,
+    "active": true
+  },
+  {
+    "id": "photozones",
+    "title": {
+      "ru": "Эффектные Фотозоны",
+      "ro": "Foto-zone Spectaculoase",
+      "en": "Spectacular Photo Zones"
+    },
+    "category": {
+      "ru": "Инсталляции",
+      "ro": "Instalații",
+      "en": "Installations"
+    },
+    "image": "https://solaair.ru/upload/iblock/93b/i0dm3pdols5q3paylyrd4hmulhirxm82.JPG",
+    "order": 5,
+    "active": true
+  }
+]

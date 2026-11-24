@@ -11,9 +11,9 @@ export default function AdminPage() {
   const [adminLang, setAdminLang] = useState<AdminLang>('ru');
 
   useEffect(() => {
-    // Check saved language
-    const saved = localStorage.getItem('luxe_admin_lang') as AdminLang;
-    if (saved && (saved === 'ru' || saved === 'ro' || saved === 'en')) {
+    // Check saved language (only RU and RO supported in admin panel)
+    const saved = localStorage.getItem('luxe_admin_lang');
+    if (saved === 'ru' || saved === 'ro') {
       setAdminLang(saved);
     }
   }, []);

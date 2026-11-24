@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import { supabase } from '@/lib/supabase';
-import { verifyAdminToken, getCatalog, getLeads } from '@/lib/db';
+import { verifyAdminToken, getCatalog, getLeads, getPortfolio } from '@/lib/db';
 
 async function checkAuth(): Promise<boolean> {
   const cookieStore = await cookies();
@@ -17,6 +17,7 @@ export async function POST() {
   try {
     const catalog = await getCatalog();
     const leads = await getLeads();
+    const portfolio = await getPortfolio();
 
     // 1. Sync Categories
     for (const cat of catalog.categories) {
@@ -41,6 +42,8 @@ export async function POST() {
         description_ro: item.description.ro,
         description_en: item.description.en,
         price: item.price,
+        currency: item.currency || 'EUR',
+        price_from: Boolean(item.priceFrom),
         image: item.image,
         badge: item.badge || '',
         features: item.features || [],
@@ -59,6 +62,22 @@ export async function POST() {
         message: lead.message,
         status: lead.status,
         notes: lead.notes || ''
+      });
+    }
+
+    // 4. Sync Portfolio Items (Base64 & URLs)
+    for (const p of portfolio) {
+      await supabase.from('portfolio_items').upsert({
+        id: p.id,
+        title_ru: p.title.ru,
+        title_ro: p.title.ro,
+        title_en: p.title.en,
+        category_ru: p.category.ru,
+        category_ro: p.category.ro,
+        category_en: p.category.en,
+        image: p.image,
+        order_index: p.order || 0,
+        active: p.active !== false,
       });
     }
 

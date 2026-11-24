@@ -259,3 +259,74 @@
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(13, 13, 15, 0.12);
 }
+
+@media (max-width: 768px) {
+  .carouselSection {
+    padding: 3.75rem 1.25rem;
+  }
+
+  .header {
+    margin-bottom: 1.75rem;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .arrowBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .track {
+    gap: 1rem;
+    padding: 0.5rem 0.25rem 1.25rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .card {
+    flex: 0 0 82vw;
+    max-width: 330px;
+    border-radius: 22px;
+    padding: 1.15rem;
+  }
+
+  .imageWrapper {
+    height: 190px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+  }
+
+  .cardTitle {
+    font-size: 1.12rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .desc {
+    font-size: 0.88rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .bookBtn {
+    padding: 0.85rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .footerAction {
+    margin-top: 2rem;
+  }
+
+  .viewAllLink {
+    width: 100%;
+    justify-content: center;
+    padding: 0.95rem 1.5rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+  }
+}

@@ -43,3 +43,10 @@
   color: var(--accent); /* Luxurious gold star */
   filter: drop-shadow(0 0 8px rgba(176, 141, 87, 0.4));
 }
+
+@media (max-width: 768px) {
+  .dividerContainer {
+    padding: 2.25rem 1.25rem;
+    gap: 1rem;
+  }
+}
